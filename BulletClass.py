@@ -18,17 +18,3 @@ class Bullet:
         return self.mask.overlap(obj.mask, (offset))
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
