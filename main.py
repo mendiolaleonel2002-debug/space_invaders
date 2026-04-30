@@ -5,7 +5,10 @@ import os
 from PlayerClass import Player
 from EnemyClass import Enemy
 from DrawingClass import Drawing
-
+from VentanaNombre import PantallaNombre
+from MenuPrincipalClass import MenuPrincipal
+from AcercaDeMenuClass import MenuAcercaDe
+from MenuPuntajeClass import MenuPuntajes
 # Background:
 BACKGROUND = pygame.image.load(os.path.join('img', 'background.png'))
 ICON_IMAGE = pygame.image.load(os.path.join('img', 'title_icon.png'))
@@ -123,5 +126,13 @@ def initGame():
 def initPuntaje():
     menu_puntajes = MenuPuntajes(menu_principal).ejecutar()
 
+
 def initAbout():
     menu_puntajes = MenuAcercaDe(menu_principal).ejecutar()
+
+def menu_principal():
+    menu_principal = MenuPrincipal(initGame,initPuntaje,initAbout).menu_principal()
+
+
+menu_principal()
+
